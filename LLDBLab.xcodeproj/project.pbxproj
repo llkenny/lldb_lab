@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		504116ED2F7C195100763131 /* LLDBLab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LLDBLab; sourceTree = BUILT_PRODUCTS_DIR; };
+		504116F92F7C19D600763131 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +45,7 @@
 		504116E42F7C195100763131 = {
 			isa = PBXGroup;
 			children = (
+				504116F92F7C19D600763131 /* README.md */,
 				504116EF2F7C195100763131 /* LLDBLab */,
 				504116EE2F7C195100763131 /* Products */,
 			);
