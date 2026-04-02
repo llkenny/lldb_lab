@@ -1,6 +1,6 @@
 #  Examples
 
-## memory read
+## Memory read
 
 Command:
 
@@ -25,3 +25,36 @@ Explanation:
 
     41 6c 65 78
     A  l  e  x
+
+## Catch all Swift object allocations
+
+Command:
+    
+    breakpoint set -n swift_allocObject # or add Symbolic Breakpoint, symbol: swift_allocObject
+    
+    bt                                  # allocation stack
+    register read x0 x1 x2              # allocation arguments
+    po $x0                              # allocated type
+    
+    finish                              # step out
+    register read x0                    # object pointer
+    memory read -f x -s 8 -c 4 $x0
+
+Purpose:
+* detect unexpected allocations
+* debug performance issues
+* find hidden class creation
+* observe ARC behavior
+* reverse engineer frameworks
+
+Example: performance debugging UICollectionView scroll
+
+    UICollectionViewCell allocation
+    UILabel allocation
+    UIImageView allocation
+    
+Explanation:
+
+    x0 = 0x... OBJC_METACLASS_$__StringStorage  ← String allocation
+    x1 = 0x40                                   ← 64 bytes - heap string, not small-string
+    x2 = 0x7                                    ← runtime flags (aligned / refcounted / swift object)

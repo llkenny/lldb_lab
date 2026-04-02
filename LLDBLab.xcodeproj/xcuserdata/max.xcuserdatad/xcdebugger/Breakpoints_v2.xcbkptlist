@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5B78FA9E-A36C-4FCB-943F-580FE64D60E8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LLDBLab/main.swift"
@@ -18,6 +18,19 @@
             endingLineNumber = "13"
             landmarkName = "makeUser()"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "B64A1F0B-48A2-4D0D-9D20-AD18A0FE2DA6"
+            shouldBeEnabled = "Yes"
+            condition = "image lookup -a $x0"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
