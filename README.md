@@ -1,32 +1,7 @@
 #  LLDB lab
 
-Stage 1 — Basics
-	•	breakpoints
-	•	stepping (step, next, finish)
-	•	po, p, expr
-	•	inspecting memory
-	•	registers
+## Terms
 
-Stage 2 — Real debugging power
-	•	conditional breakpoints
-	•	symbolic breakpoints
-	•	watchpoints
-	•	backtrace analysis
-
-Stage 3 — Swift runtime & dispatch
-	•	value vs reference in memory
-	•	ARC observation
-	•	protocol dispatch
-	•	existential containers
-
-Stage 4 — Assembly & performance
-	•	disassemble Swift
-	•	registers
-	•	calling conventions
-	•	stack layout
-
-Stage 5 — Hardcore staff-level
-	•	break on swift_allocObject
-	•	catch retain/release
-	•	inspect vtables / witness tables
-	•	debug concurrency
+LLVM (Low Level Virtual Machine) - compiler infrastructure used to build languages like Swift, Clang (C/C++), Rust, etc
+LLDB (Low Level Debugger) - modern debugger from the LLVM toolchain
+ABI (Application Binary Interface) - rules for compiled code communication

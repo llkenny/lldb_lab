@@ -5,32 +5,88 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "5B78FA9E-A36C-4FCB-943F-580FE64D60E8"
-            shouldBeEnabled = "No"
+            uuid = "4C5A0CBB-68A7-4896-B098-F69709AD50F3"
+            shouldBeEnabled = "Yes"
+            condition = "$x0==0x00000001007b6560"
             ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LLDBLab/main.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "makeUser()"
-            landmarkType = "9">
+            continueAfterRunningActions = "Yes"
+            symbolName = "swift_retain">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "bt">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "4C5A0CBB-68A7-4896-B098-F69709AD50F3 - 71fc7f1f0cc4195a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_retain"
+                  moduleName = "libswiftCore.dylib"
+                  usesParentBreakpointCondition = "Yes">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "B64A1F0B-48A2-4D0D-9D20-AD18A0FE2DA6"
+            uuid = "A65E9BA8-5C88-4881-8FAA-03158ED1D15C"
             shouldBeEnabled = "Yes"
-            condition = "image lookup -a $x0"
+            condition = "$x0==0x00000001007b6560"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            symbolName = "swift_release"
+            moduleName = "">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "bt">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "A65E9BA8-5C88-4881-8FAA-03158ED1D15C - 93159c45035c703b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_release"
+                  moduleName = "libswiftCore.dylib"
+                  usesParentBreakpointCondition = "Yes">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1F15705-635C-4A7D-A28B-1C07BB237E8C"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            symbolName = "">
-            <Locations>
-            </Locations>
+            filePath = "LLDBLab/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "makeUser()"
+            landmarkType = "9">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "register read x0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,13 +1,3 @@
-final class User {
-    let id: Int
-    var name: String
-    
-    init(id: Int, name: String) {
-        self.id = id
-        self.name = name
-    }
-}
-
 func makeUser() -> User {
     let user = User(id: 42, name: "Max")
     return user
@@ -15,3 +5,11 @@ func makeUser() -> User {
 
 let u = makeUser()
 print(u.name)
+
+// MARK: Retain / Release
+
+// Retain
+var c: User? = u
+
+// Release
+c = nil
