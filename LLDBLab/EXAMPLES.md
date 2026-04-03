@@ -77,3 +77,34 @@ Explanation:
     * frame #0: 0x0000000198f64a94 libswiftCore.dylib`swift_release             ← release
     frame #1: 0x0000000100000d58 LLDBLab`main at main.swift:13:3                ← location
     frame #2: 0x000000018573dd54 dyld`start + 7184
+
+## Heap / Stack
+
+Command:
+    
+    p heapUser
+    p stackUser
+    # or
+    frame variable -L heapUser
+    frame variable -L stackUser
+    
+Example: checking where the object is located
+
+Explanation: 
+
+    (LLDBLab.User) 0x00000001007d5e70 (id = 42, name = "Max")   ← heap (0x00000001007d5e70)
+    (LLDBLab.StackUser)  (id = 1, name = "Alex")                ← stack
+    
+    scalar: (LLDBLab.User) heapUser = 0x00000001007d5e70 {      ← heap (0x00000001007d5e70)
+    0x00000001007d5e80:   id = 42
+    0x00000001007d5e88:   name = "Max"
+    }
+    0x00000001000081a8: (LLDBLab.StackUser) stackUser = {       ← stack
+    0x00000001000081a8:   id = 1
+    0x00000001000081b0:   name = "Alex"
+    }
+    
+Optional:
+    
+    (lldb) memory region 0x00000001007d5e70                     
+    [0x00000001007bc000-0x0000000100bbc000) rw-                 ← region

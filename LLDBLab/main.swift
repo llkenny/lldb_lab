@@ -7,9 +7,10 @@ let u = makeUser()
 print(u.name)
 
 // MARK: Retain / Release
+var c: User? = u // Retain
+c = nil // Release
 
-// Retain
-var c: User? = u
-
-// Release
-c = nil
+// MARK: Heap / stack
+let heapUser = makeUser()                       // heap
+let stackUser = StackUser(id: 1, name: "Alex")  // stack
+print("")
