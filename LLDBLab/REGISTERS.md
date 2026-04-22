@@ -9,7 +9,7 @@ CPU registers are the fastest, smallest, and most accessible storage units insid
 
 ## PATTERNS
 
-| Pattern | code | menas |
+| Pattern | code | means |
 | ------- | ---- | ----- |
 | constant | mov w8, #0x2a | 42 |
 | call | bl something | call function |
